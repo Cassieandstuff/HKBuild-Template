@@ -1,0 +1,17 @@
+# Normalize line endings on commit. Windows authors get CRLF in working tree;
+# Linux/macOS authors get LF. Binary files are left untouched.
+* text=auto
+
+# Force LF for YAML (HKBuild reads these on all platforms)
+*.yaml text eol=lf
+*.yml  text eol=lf
+
+# Force CRLF for Windows-only files
+*.sln  text eol=crlf
+
+# Treat compiled binaries and generated data as binary
+*.hkx  binary
+*.exe  binary
+*.dll  binary
+*.lib  binary
+*.pdb  binary

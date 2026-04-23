@@ -1,0 +1,9 @@
+# Idle state — plays CLIP_MyIdle on a loop.
+# This is the default entry state for MyRootSM.
+#
+# Replace CLIP_MyIdle with your actual animation clip generator,
+# or build a blend tree here using hkbBlendingTransitionEffect etc.
+class: hkbStateMachineStateInfo
+name: ST_MyIdle
+stateId: 0
+generator: CLIP_MyIdle

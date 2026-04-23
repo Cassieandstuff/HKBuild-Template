@@ -1,0 +1,29 @@
+variables:
+  # ---------------------------------------------------------------------------
+  # MyPlugin — state flags
+  # Add your behavior graph variables here.
+  # ---------------------------------------------------------------------------
+
+  # MyPlugin_IsActive: true while MyRootSM is the active generator.
+  # Driven automatically by MyRootSM.isActive binding.
+  - name: MyPlugin_IsActive
+    type: VARIABLE_TYPE_BOOL
+    value: 0
+
+  # Example real variable — normalized [0, 1].
+  # Replace or remove as needed.
+  - name: MyPlugin_Speed
+    type: VARIABLE_TYPE_REAL
+    value: 0
+
+events:
+  # ---------------------------------------------------------------------------
+  # MyPlugin — behavior graph events
+  # These are sent to the character's behavior graph from C++ code.
+  # ---------------------------------------------------------------------------
+
+  # Sent by C++ to activate this behavior.
+  - name: MyPlugin_Enter
+
+  # Sent by C++ to deactivate this behavior.
+  - name: MyPlugin_Exit

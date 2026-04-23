@@ -1,0 +1,14 @@
+# Placeholder idle clip — replace animationName with a real .hkx animation path.
+#
+# animationName paths are relative to the Skyrim Data directory:
+#   "Animations\MyMod\MyIdleLoop.hkx"
+#
+# mode options:
+#   MODE_LOOPING    -- loops continuously (most common for idles)
+#   MODE_SINGLE_PLAY -- plays once and stops
+#   MODE_USER_CONTROLLED -- controlled by graph variable
+class: hkbClipGenerator
+name: CLIP_MyIdle
+animationName: "Animations\\MyPlugin\\MyIdleLoop.hkx"
+mode: MODE_LOOPING
+playbackSpeed: 1.000000

@@ -1,0 +1,28 @@
+# Root state machine for MyPlugin.
+#
+# State 0: Idle (default entry state).
+#
+# ---- CUSTOMIZING ------------------------------------------------------------
+# Add states by listing more state names in the 'states' array and creating
+# matching YAML files in this directory.
+#
+# Add transitions using behavior graph events defined in data/graphdata.yaml:
+#   transitions:
+#     - event: MyPlugin_Enter
+#       toState: ST_MyActive
+#       flags: FLAG_IS_LOCAL_WILDCARD|FLAG_DISABLE_CONDITION
+#
+# Bind graph variables to SM properties with the 'bindings' block:
+#   bindings:
+#     - memberPath: isActive
+#       variable: MyPlugin_IsActive
+# ---------------------------------------------------------------------------
+class: hkbStateMachine
+name: MyRootSM
+startStateId: 0
+selfTransitionMode: SELF_TRANSITION_MODE_NO_TRANSITION
+bindings:
+  - memberPath: isActive
+    variable: MyPlugin_IsActive
+states:
+  - ST_MyIdle
