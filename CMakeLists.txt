@@ -1,6 +1,6 @@
-# ---------------------------------------------------------------------------
+﻿# ---------------------------------------------------------------------------
 # HKBuild-Template
-# SKSE plugin + HKBuild behavior skeleton — C++23, CommonLibSSE-NG
+# SKSE plugin + HKBuild behavior skeleton â€” C++23, CommonLibSSE-NG
 #
 # ---- QUICK START ------------------------------------------------------------
 #
@@ -8,9 +8,9 @@
 #    Also update AUTHOR_NAME and MOD_FOLDER_NAME in behavior_src/CMakeLists.txt.
 #
 # 2. Set environment variables (once, system-wide or in your IDE):
-#      COMMONLIB_SSE_FOLDER  — path to a local CommonLibSSE-NG clone
-#      VCPKG_ROOT            — path to your vcpkg installation
-#      SKYRIM_MODS_FOLDER    — path to your MO2 mods/ folder (for auto-deploy)
+#      COMMONLIB_SSE_FOLDER  â€” path to a local CommonLibSSE-NG clone
+#      VCPKG_ROOT            â€” path to your vcpkg installation
+#      SKYRIM_MODS_FOLDER    â€” path to your MO2 mods/ folder (for auto-deploy)
 #
 # 3. Configure and build:
 #      cmake --preset release
@@ -76,8 +76,10 @@ else()
     endif()
 endif()
 
+if(NOT TARGET CommonLibSSE)
 add_subdirectory("${COMMONLIB_PATH}"
     "${CMAKE_CURRENT_BINARY_DIR}/_deps/clib-build" EXCLUDE_FROM_ALL)
+endif()
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CommonLibSSE.cmake")
 
 # ---------------------------------------------------------------------------
